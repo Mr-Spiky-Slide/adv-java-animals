@@ -1,4 +1,4 @@
-package us.mattgreen;
+package us.jackhoward;
 
 import java.util.ArrayList;
 
@@ -11,9 +11,8 @@ public class Main {
         ArrayList<Talkable> zoo = new ArrayList<>();
 
         // Lines to Replace Begin Here
-        zoo.add(new Dog(true, "Bean"));
-        zoo.add(new Cat(9, "Charlie"));
-        zoo.add(new Teacher(44, "Stacy Read"));
+        AddAnimal zookeeper = new AddAnimal();
+        zoo.add(zookeeper.addAnimal());
         // End Lines to Replace
 
         for (Talkable thing : zoo) {
@@ -34,4 +33,5 @@ public class Main {
         System.out.println(p.getName() + " says=" + p.talk());
         outFile.fileWrite(p.getName() + " | " + p.talk());
     }
+
 }
